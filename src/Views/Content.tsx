@@ -9,14 +9,10 @@ const Content = () => {
     return (
         <>
             <About />
-
             <SectionOne />
-
-            <SectionOne />
+            <SectionFour />
             <SectionTwo />
             <SectionThree />
-
-            <SectionFour />
 
             <SectionFive />
             { /* Other sections .. */ }

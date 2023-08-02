@@ -1,8 +1,38 @@
-import { useMantineTheme, Container, Text, Title, Grid, Card, Image, Badge, Button, Group } from '@mantine/core';
+import { useMantineTheme, Container, Text, Title, Grid, Card, Image, Badge, Button, Group, SimpleGrid, Stack } from '@mantine/core';
+
+
+
+const getChild = (height: number) =>   <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} height={height}radius= "md" alt={'sample2'} />
+;
+const BASE_HEIGHT = 360;
+const getSubHeight = (children: number, spacing: number) =>
+  BASE_HEIGHT / children - spacing * ((children - 1) / children);
+
+export function Subgrid() {
+  const theme = useMantineTheme();
+  return (
+    <Container my="md">
+      <SimpleGrid cols={4} breakpoints={[{ maxWidth: 'xs', cols: 1 }]}>
+        {getChild(BASE_HEIGHT)}
+        <Stack>
+          {getChild(getSubHeight(2, theme.spacing.md))}
+          {getChild(getSubHeight(2, theme.spacing.md))}
+        </Stack>
+        <Stack>
+          {getChild(getSubHeight(3, theme.spacing.md))}
+          {getChild(getSubHeight(3, theme.spacing.md))}
+          {getChild(getSubHeight(3, theme.spacing.md))}
+        </Stack>
+        {getChild(BASE_HEIGHT)}
+      </SimpleGrid>
+    </Container>
+  );
+}
 
 const SectionFour = () => {
     const theme = useMantineTheme();
 
+    
     return (
         <section id="section-four">
             <Container>
@@ -82,6 +112,7 @@ const SectionFour = () => {
                 </Grid>
 
             </Container>
+            <Subgrid></Subgrid>
         </section>
     );
 };

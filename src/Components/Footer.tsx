@@ -4,7 +4,7 @@ const Footer = () => {
     const theme = useMantineTheme();
     
     return (
-        <footer style={{ backgroundColor: theme.colors.yellow[6]}}>
+        <footer style={{ backgroundColor: theme.colors.cyan[5]}}>
 
             <Container>
                 <Grid justify="space-around">
@@ -26,14 +26,14 @@ const Footer = () => {
 
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>
                         <Code color= "blue" style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: 15 }}>
-                            Template made by
-                            <Anchor href="https://github.com/Giuseppetm">
+                            Une entreprise respectable depuis 1993
+                            <Anchor href="https://github.com">
                                 <UnstyledButton>
                                     <Group>
                                         <Avatar size={40} color= "blue">GDC</Avatar>
                                         <div>
-                                            <Text>Giuseppetm</Text>
-                                            <Text size="xs" color="dimmed">giuseppe.delcampo@outlook.com</Text>
+                                            <Text>Robert et fils</Text>
+                                            <Text size="xs" color="dimmed">mail@outlook.com</Text>
                                         </div>
                                     </Group>
                                 </UnstyledButton>

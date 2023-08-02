@@ -1,5 +1,6 @@
 import { Title, Text, Container, Grid, Image, Button } from '@mantine/core';
 
+
 const SectionTwo = () => {
     //const theme = useMantineTheme();
 

@@ -11,13 +11,13 @@ const About = () => {
 
                 <div className="about-content">
 
-                    <div style={{ marginBottom: 15 }}>
+                    <div >
                         <Text transform="uppercase" weight={500} color="blue">
                             Une entreprise familial de père en fils
                         </Text>
                     </div>
 
-                    <div style={{ marginBottom: 15 }}>
+                    <div>
                         <Text>
                             <MediaQuery query="(max-width: 768px)" styles={{ fontSize: '2.8rem !important' }}>
                                 <h1 className="title">Notre expertise selon vos goûts</h1>
