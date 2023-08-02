@@ -29,7 +29,7 @@ const SectionOne = () => {
             controls={false}
             width='100%'
             height='100%'
-            autoPlay loop muted
+            preload="auto" autoPlay muted loop
           >
           <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
         </div>
