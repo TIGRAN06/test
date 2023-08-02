@@ -59,7 +59,7 @@ const SectionTwo = () => {
             controls={false}
             width='100%'
             height='100%'
-            autoPlay muted loop 
+            autoPlay muted loop playsInline
           >
           <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
         </div>
@@ -77,7 +77,7 @@ const SectionTwo = () => {
             controls={false}
             width='100%'
             height='100%'
-            autoPlay muted loop 
+            autoPlay muted loop playsInline
           >
           <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
         </div>
@@ -94,7 +94,7 @@ const SectionTwo = () => {
             controls={false}
             width='100%'
             height='100%'
-            autoPlay muted loop 
+            autoPlay muted loop playsInline
           >
           <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
         </div>
@@ -111,7 +111,7 @@ const SectionTwo = () => {
             controls={false}
             width='100%'
             height='100%'
-            autoPlay muted loop 
+            autoPlay muted loop playsInline
           >
           <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
         </div>
