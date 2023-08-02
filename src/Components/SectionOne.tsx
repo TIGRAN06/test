@@ -3,21 +3,13 @@ import { Text,Image, Container, useMantineTheme, Title, Skeleton, Grid, SimpleGr
 import '../Styles/SectionOne.scss';
 
 import { useMediaQuery } from '@mantine/hooks';
+import ReactPlayer from 'react-player';
 
 
 
 
 
 const SectionOne = () => {
-
-    const carouselContent = {
-        height: '100%',
-        width: '100%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column' as 'column',
-        borderRadius: 15,
-    };
 
     return (
         <section id="section-one">
@@ -30,80 +22,25 @@ const SectionOne = () => {
                 <Text color="black" align="center" mb="25px">
                     Demenager tout en restant chez vous 👌
                 </Text>
+                <div>
+        <div className='player-wrapper'>
+          <ReactPlayer
+            url='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
+            className='react-player'
+            controls
+            forcevideo={true}
+            width='100%'
+            height='100%'
+          />
+        </div>
+      </div>
                 
-                <Carousel
-                    withIndicators
-                    height={300}
-                    slideSize="33.333333%"
-                    slideGap="md"
-                    breakpoints={[
-                        { maxWidth: 'md', slideSize: '50%' },
-                        { maxWidth: 'sm', slideSize: '100%', slideGap: 15 },
-                    ]}
-                    loop
-                    align="start"
-                    pr="10px"
-                    pl="10px"
-                >
 
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title order={2}>Mont-Boron</Title>
-                            <Text>Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title order={2}>Mont-Boron</Title>
-                            <Text>Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title order={2}>Mont-Boron</Title>
-                            <Text>Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title order={2}>Mont-Boron</Title>
-                            <Text>Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title order={2}>Mont-Boron</Title>
-                            <Text>Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title order={2}>Mont-Boron</Title>
-                            <Text>Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title order={2}>Mont-Boron</Title>
-                            <Text>Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title order={2}>Mont-Boron</Title>
-                            <Text>Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                </Carousel>
+
+
             </Container>
+                                        
+
         </section>
     );
 };

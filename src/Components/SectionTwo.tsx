@@ -1,9 +1,17 @@
+import { Carousel } from '@mantine/carousel';
 import { Title, Text, Container, Grid, Image, Button } from '@mantine/core';
-
+import ReactPlayer from 'react-player';
 
 const SectionTwo = () => {
     //const theme = useMantineTheme();
-
+    const carouselContent = {
+        height: '100%',
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        flexDirection: 'column' as 'column',
+        borderRadius: 15,
+    };
     return (
         <section id="section-two">
             <Container>
@@ -22,6 +30,88 @@ const SectionTwo = () => {
                         <Image src={require('../Images/lime-surfing.png')} alt={'sample1'} style={{ width: '100%' }} />
                     </Grid.Col>
                 </Grid>
+
+                <Carousel
+                    withIndicators
+                    height={"100%"}
+                    slideSize="33.333333%"
+                    slideGap="md"
+                    breakpoints={[
+                        { maxWidth: 'md', slideSize: '50%' },
+                        { maxWidth: 'sm', slideSize: '100%', slideGap: 15 },
+                    ]}
+                    loop
+                    align="start"
+                    pr="10px"
+                    pl="10px"
+                >
+
+                    <Carousel.Slide>
+                        <div style={carouselContent}>
+                        <Title align="center" order={2}>Mont-Boron</Title>
+                            <Text align="center" >Something here too.</Text>
+                            <div>
+        <div className='player-wrapper'>
+          <ReactPlayer
+            url='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
+            className='react-player'
+            controls
+            width='100%'
+            height='100%'
+          />
+        </div>
+      </div></div>
+                        
+                    </Carousel.Slide>
+                    <Carousel.Slide>
+                        <div style={carouselContent}>
+                        <Title align="center" order={2}>Mont-Boron</Title>
+                            <Text align="center" >Something here too.</Text>
+                            <div>
+        <div className='player-wrapper'>
+          <ReactPlayer
+            url='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
+            className='react-player'
+            controls
+            width='100%'
+            height='100%'
+          />
+        </div>
+      </div></div>
+                    </Carousel.Slide>
+                    <Carousel.Slide>
+                        <div style={carouselContent}>
+                        <Title align="center" order={2}>Mont-Boron</Title>
+                            <Text align="center" >Something here too.</Text>
+                            <div>
+        <div className='player-wrapper'>
+          <ReactPlayer
+            url='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
+            className='react-player'
+            controls
+            width='100%'
+            height='100%'
+          />
+        </div>
+      </div> </div>
+                    </Carousel.Slide>
+                    <Carousel.Slide>
+                        <div style={carouselContent}>
+                        <Title align="center" order={2}>Mont-Boron</Title>
+                            <Text align="center" >Something here too.</Text>
+                            <div>
+        <div className='player-wrapper'>
+          <ReactPlayer
+            url='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'
+            className='react-player'
+            controls
+            width='100%'
+            height='100%'
+          />
+        </div>
+      </div> </div>
+                    </Carousel.Slide>
+                </Carousel>
             </Container>
         </section>
     )
