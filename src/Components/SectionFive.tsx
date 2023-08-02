@@ -14,23 +14,23 @@ const SectionFive = () => {
                     </Text>
                 </div>
 
-                <Accordion  variant="contained">
+                <Accordion  radius="md" variant="contained">
                     <Accordion.Item value="item1">
-                        <Accordion.Control  icon={<FiCoffee size={20} color={"#fab005"} />}>
+                        <Accordion.Control  style={{ textAlign: 'center' }} icon={<FiCoffee size={20} color={"#fab005"} />}>
                             Is Dennis Farina famous?
                         </Accordion.Control>
                         <Accordion.Panel >Yes, of course.</Accordion.Panel>
                     </Accordion.Item>
 
                     <Accordion.Item value="item2">
-                        <Accordion.Control icon={<FiCloudSnow size={20} color={"#fab005"} />}>
+                        <Accordion.Control style={{ textAlign: 'center' }} icon={<FiCloudSnow size={20} color={"#fab005"} />}>
                             Are pineapples good?
                         </Accordion.Control>
                         <Accordion.Panel>Unfortunately no.</Accordion.Panel>
                     </Accordion.Item>
 
                     <Accordion.Item value="item3">
-                        <Accordion.Control icon={<FiAnchor size={20} color={"#fab005"} />}>
+                        <Accordion.Control style={{ textAlign: 'center' }} icon={<FiAnchor size={20} color={"#fab005"} />}>
                             Do you like yellow?
                         </Accordion.Control>
                         <Accordion.Panel>Oh yes!</Accordion.Panel>

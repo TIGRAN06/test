@@ -11,7 +11,7 @@ const About = () => {
 
                 <div className="about-content">
 
-                    <div >
+                    <div style={{ marginBottom: 25 }}>
                         <Text transform="uppercase" weight={500} color="blue">
                             Une entreprise familial de père en fils
                         </Text>

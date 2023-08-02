@@ -42,7 +42,7 @@ const SectionFour = () => {
 
                 <Grid>
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>
-                        <Card shadow="sm" p="lg" style={{ height: '100%'}}>
+                        <Card  radius="md" shadow="sm" p="lg" style={{ height: '100%'}}>
                             <Card.Section>
                                 <Image src={require('../Images/lime-welcome.png')} alt={'sample1'} />
                             </Card.Section>
@@ -65,7 +65,7 @@ const SectionFour = () => {
                     </Grid.Col>
 
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>
-                        <Card shadow="sm" p="lg" style={{ height: '100%' }}>
+                        <Card  radius="md" shadow="sm" p="lg" style={{ height: '100%' }}>
                             <Card.Section>
                                 <Image src={require('../Images/lime-canoeing.png')} alt={'sample1'} />
                             </Card.Section>
@@ -87,8 +87,8 @@ const SectionFour = () => {
                         </Card>
                     </Grid.Col>
 
-                    <Grid.Col xs={12} sm={4} md={4} lg={4}>
-                        <Card shadow="sm" p="lg" style={{ height: '100%' }}>
+                    <Grid.Col  xs={12} sm={4} md={4} lg={4}>
+                        <Card  radius="md" shadow="sm" p="lg" style={{ height: '100%' }}>
                             <Card.Section>
                                 <Image src={require('../Images/lime-message-sent.png')} alt={'sample1'} />
                             </Card.Section>

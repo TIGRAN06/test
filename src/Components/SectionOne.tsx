@@ -14,8 +14,8 @@ const SectionOne = () => {
     return (
         <section id="section-one">
 
-            <Container>
-                <Text color="black" align="center" mb="15px">
+            <Container >
+                <Text  color="black" align="center" mb="15px">
                     <Title order={1}>Nos example de projets !</Title>
                 </Text>
 
@@ -24,12 +24,12 @@ const SectionOne = () => {
                 </Text>
                 <div>
         <div className='player-wrapper'>
-        <video
+        <video 
             className='react-player'
             controls={false}
             width='100%'
             height='100%'
-            preload="auto" autoPlay muted loop
+            preload="auto" autoPlay muted loop playsInline
           >
           <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
         </div>
