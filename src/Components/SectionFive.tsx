@@ -8,18 +8,18 @@ const SectionFive = () => {
         <section id="section-five">
             <Container>
                 <div style={{ marginBottom: 30 }}>
-                    <div style={{ textAlign: 'left' }}><Badge variant="filled" color= "blue">FAQs</Badge></div>
+                    <div style={{ textAlign: 'center' }}><Badge variant="filled" color= "blue">FAQs</Badge></div>
                     <Text color="black">
-                        <Title order={1} style={{ marginTop: 10 }}>Woah, Frequently asked questions here</Title>
+                        <Title align="center" order={1} style={{ marginTop: 10 }}>Woah, Frequently asked questions here</Title>
                     </Text>
                 </div>
 
-                <Accordion variant="contained">
+                <Accordion  variant="contained">
                     <Accordion.Item value="item1">
-                        <Accordion.Control icon={<FiCoffee size={20} color={"#fab005"} />}>
+                        <Accordion.Control  icon={<FiCoffee size={20} color={"#fab005"} />}>
                             Is Dennis Farina famous?
                         </Accordion.Control>
-                        <Accordion.Panel>Yes, of course.</Accordion.Panel>
+                        <Accordion.Panel >Yes, of course.</Accordion.Panel>
                     </Accordion.Item>
 
                     <Accordion.Item value="item2">
