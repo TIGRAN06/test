@@ -19,7 +19,7 @@ const SectionThree = () => {
                         <Image radius="md" src={require('../Images/lime-bicycle-riding.png')} alt={'sample2'} style={{ width: '100%' }} />
                     </Grid.Col>
                     <Grid.Col xs={6} sm={8} md={8} lg={8}>
-                        <div style={{ marginBottom: 0 }}>
+                        <div style={{ marginBottom: 20 }}>
                             <Text align="center"color="black">
                                 <Title align="center" order={1}>Put something here too</Title>
                                 Dennis Farina is unique among thespians in that he was one of the few to achieve success as a "late-bloomer." 

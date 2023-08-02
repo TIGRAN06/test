@@ -24,7 +24,7 @@ const SectionTwo = () => {
                                 In 1998's "Saving Private Ryan," directed by Steven Spielberg, Farina played "Col. Anderson," a pivotal role in the film.
                                 `}
                             </Text>
-                            <div style={{ textAlign: 'center' }}><Button  color= "cyan">Voir plus</Button></div>
+                            <div style={{  marginTop: 20, textAlign: 'center' }}><Button  color= "cyan">Voir plus</Button></div>
                         </div>
                         
                     </Grid.Col>

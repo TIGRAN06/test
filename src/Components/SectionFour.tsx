@@ -36,11 +36,11 @@ const SectionFour = () => {
     return (
         <section id="section-four">
             <Container>
-                <Text color="black" align="center">
+                <Text style={{ marginBottom: 20 }}color="black" align="center">
                     <Title order={1} mb="30px">These cards are really nice</Title>
                 </Text>
 
-                <Grid>
+                <Grid style={{ marginBottom: 20 }}>
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>
                         <Card  radius="md" shadow="sm" p="lg" style={{ height: '100%'}}>
                             <Card.Section>
