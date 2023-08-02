@@ -1,4 +1,16 @@
-import { useMantineTheme, Container, Grid, Text, Button, Group, Avatar, UnstyledButton, Anchor, Code } from '@mantine/core';
+import { useMantineTheme, Container, Grid, Avatar, UnstyledButton, Anchor, Code } from '@mantine/core';
+import {
+    createStyles,
+    Text,
+    Title,
+    SimpleGrid,
+    TextInput,
+    Textarea,
+    Button,
+    Group,
+    ActionIcon,
+  } from '@mantine/core';
+
 
 const Footer = () => {
     const theme = useMantineTheme();
@@ -7,6 +19,7 @@ const Footer = () => {
         <footer style={{ backgroundColor: theme.colors.cyan[5]}}>
 
             <Container>
+                
                 <Grid justify="space-around">
 
                     <Grid.Col xs={12} sm={8} md={8} lg={8}>
