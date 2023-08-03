@@ -5,13 +5,11 @@ import { createStyles, Title } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   root: {
-    border: '20px',
     overflow: 'hidden',
     backgroundColor: '#11284b',
-    backgroundSize: 'cover',
+    backgroundSize: '100% 100%',
     width: '100%',
-    height: '90%',
-    borderRadius:'20px',
+    borderRadius: '20px',
     backgroundPosition: 'center',
     backgroundImage:
       'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80)',
@@ -20,9 +18,10 @@ const useStyles = createStyles((theme) => ({
   },
 
   inner: {
-    radius:'md',
     display: 'flex',
     justifyContent: 'space-between',
+    textAlign: 'center', 
+    marginBottom:40,
 
     [theme.fn.smallerThan('md')]: {
       flexDirection: 'column',
@@ -30,61 +29,52 @@ const useStyles = createStyles((theme) => ({
   },
 
   image: {
-    radius:'md',
     [theme.fn.smallerThan('md')]: {
       display: 'none',
     },
   },
 
   content: {
-    radius:'md',
     paddingTop: `calc(${theme.spacing.xl} * 2)`,
     paddingBottom: `calc(${theme.spacing.xl} * 2)`,
     marginRight: `calc(${theme.spacing.xl} * 3)`,
 
     [theme.fn.smallerThan('md')]: {
-      paddingRight: 25,
+      paddingRight: 0,
     },
   },
 
   title: {
-    radius:'md',
     color: theme.white,
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 900,
     lineHeight: 1.05,
-    paddingLeft:15,
-    fontSize: '48',
+    fontSize: '48px',
 
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
-      fontSize: '34',
+      fontSize: '34px',
       lineHeight: 1.15,
     },
   },
 
   description: {
-    radius:'md',
     color: theme.white,
     opacity: 0.75,
-    paddingLeft:15,
+
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
     },
   },
 
   control: {
-    radius:'md',
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-    fontSize: '22',
-    borderRadius:20,
+    fontSize: '22px',
+    borderRadius: '20px',
 
     [theme.fn.smallerThan('md')]: {
-      width: '75%',
-      paddingLeft:50,
-      borderRadius:20,
       fontFamily: `Greycliff CF, ${theme.fontFamily}`,
-      fontSize: '22',
+      fontSize: '22px',
     },
   },
 }));
@@ -97,29 +87,29 @@ export function HeroImageRight() {
         <div className={classes.inner}>
           <div className={classes.content}>
             <Title align="center" className={classes.title}>
-            {' '}
+              {' '}
               <Text
                 component="span"
                 inherit
-
                 variant="gradient"
                 gradient={{ from: 'White', to: 'cyan' }}
               >
-                Robert et Fils 
+                Robert et Fils
               </Text>{' '}
               rénovation
             </Title>
 
-            <Text align="center" className={classes.description} mt={30}>
-            Forte de ses 30 années d&#39;expérience, notre entreprise de rénovation et construction est un acteur de
-confiance sur le marché. Nous proposons une large gamme de services pour répondre aux besoins
-variés de nos clients. Notre équipe d&#39;experts qualifiés excelle dans la rénovation complète
-d’appartements, maisons individuelles et bâtiments sur la Côte d’Azur et Monaco. Nous offrons
-également des services de construction clé en main, depuis la conception jusqu&#39;à la réalisation,
-garantissant un processus fluide et efficace. En outre, nous nous engageons à fournir des solutions
-durables et respectueuses de l&#39;environnement, en utilisant des matériaux de qualité supérieure.
-Notre engagement envers l&#39;excellence et notre passion pour l&#39;innovation font de nous le choix idéal
-pour tous vos projets de construction et de rénovation.</Text>
+            <Text align="center" px={40} className={classes.description} mt={30}>
+              Forte de ses 30 années d'expérience, notre entreprise de rénovation et construction est un acteur de
+              confiance sur le marché. Nous proposons une large gamme de services pour répondre aux besoins
+              variés de nos clients. Notre équipe d'experts qualifiés excelle dans la rénovation complète
+              d’appartements, maisons individuelles et bâtiments sur la Côte d’Azur et Monaco. Nous offrons
+              également des services de construction clé en main, depuis la conception jusqu'à la réalisation,
+              garantissant un processus fluide et efficace. En outre, nous nous engageons à fournir des solutions
+              durables et respectueuses de l'environnement, en utilisant des matériaux de qualité supérieure.
+              Notre engagement envers l'excellence et notre passion pour l'innovation font de nous le choix idéal
+              pour tous vos projets de construction et de rénovation.
+            </Text>
 
             <Button
               variant="gradient"
@@ -127,7 +117,6 @@ pour tous vos projets de construction et de rénovation.</Text>
               size="xl"
               className={classes.control}
               mt={80}
-              ml={50}
             >
               <Text color="black">Get started</Text>
             </Button>
@@ -139,30 +128,19 @@ pour tous vos projets de construction et de rénovation.</Text>
 }
 
 const About = () => {
-    //const theme = useMantineTheme();
+  return (
+    <section id="about">
+      <HeroImageRight></HeroImageRight>
 
-    return (
-        <section id="about">
-          
-                        <HeroImageRight></HeroImageRight>
-                        
-            <Container fluid>
-
-                <div >
-
-
-                    <div className="buttons">
-                        <Link to="section-one" smooth duration={500}>
- </Link>
-
-                    </div>
-
-                </div>
-
-            </Container>
-
-        </section>
-    );
+      <Container fluid>
+        <div>
+          <div className="buttons">
+            <Link to="section-one" smooth duration={500}></Link>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
 };
 
 export default About;
