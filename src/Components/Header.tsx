@@ -3,6 +3,7 @@ import { UnstyledButton, Group, Avatar } from '@mantine/core';
 import React from 'react';
 import { Link } from 'react-scroll';
 
+
 const useStyles = createStyles((theme) => ({
     root: {
       overflow: 'hidden',
@@ -22,7 +23,9 @@ const Header = () => {
   const renderDesktopContent = () => {
 
     return (
+
       <div className="content-desktop">
+        
         <div>
           <Badge size="lg" radius={10} mr={10} color=" blue">
             Robert et fils
@@ -62,7 +65,7 @@ const Header = () => {
                   <div>
                     <Text>Robert et fils</Text>
                     <Text size="xs" color="dimmed">
-                      robertetfils@gmail.com
+                    contacts@robertetfils.fr
                     </Text>
                   </div>
                 </Group>
@@ -112,17 +115,17 @@ const Header = () => {
             <div className="menu-items">
               <div className="menu-item">
                 <Link to="section-one" smooth duration={500} onClick={() => setOpened(false)}>
-                  <Title order={2}>Carousel</Title>
+                  <Title order={2}>Nos réalisations</Title>
                 </Link>
               </div>
               <div className="menu-item">
                 <Link to="section-four" smooth duration={500} onClick={() => setOpened(false)}>
-                  <Title order={2}>Cards</Title>
+                  <Title order={2}>Nos services</Title>
                 </Link>
               </div>
               <div className="menu-item">
                 <Link to="section-five" smooth duration={500} onClick={() => setOpened(false)}>
-                  <Title order={2}>FAQs</Title>
+                  <Title order={2}>Nos partenaires</Title>
                 </Link>
               </div>
             </div>
@@ -130,7 +133,7 @@ const Header = () => {
             <div className="menu-items">
               <Text>Contact</Text>
 
-              <Anchor href="mailto:example@mail.com">example@mail.com</Anchor>
+              <Anchor href="mailto:example@mail.com">contacts@robertetfils.fr</Anchor>
             </div>
 
             <Code className="contact-code">
