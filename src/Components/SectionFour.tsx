@@ -162,7 +162,7 @@ const SectionFour = () => {
                     <Title order={1} mb="30px">These cards are really nice</Title>
                 </Text>
 
-                <Grid style={{ marginBottom: 20 }}>
+                <Grid style={{borderRadius:100, marginBottom: 20 }}>
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>
                         <Card  radius="md" shadow="sm" p="lg" style={{ height: '100%'}}>
                             <Card.Section>
@@ -170,7 +170,7 @@ const SectionFour = () => {
                             </Card.Section>
 
                             <Group position="apart" style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-                                <Text weight={500}>History of Dennis Farina</Text>
+                                <Text weight={500}>Construction</Text>
                                 <Badge color= "blue" variant="light">
                                     Cool badge
                                 </Badge>
@@ -193,7 +193,7 @@ const SectionFour = () => {
                             </Card.Section>
 
                             <Group position="apart" style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-                                <Text weight={500}>Career of Dennis Farina</Text>
+                                <Text weight={500}>Rénovation</Text>
                                 <Badge color= "blue" variant="light">
                                     Cool badge 2
                                 </Badge>
@@ -216,7 +216,7 @@ const SectionFour = () => {
                             </Card.Section>
 
                             <Group position="apart" style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-                                <Text weight={500}>Major roles of Dennis Farina</Text>
+                                <Text weight={500}>Architecture d'intérieure</Text>
                                 <Badge color= "blue" variant="light">
                                     Cool badge 3
                                 </Badge>

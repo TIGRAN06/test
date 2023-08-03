@@ -31,17 +31,17 @@ const Header = () => {
         <div className="navbar">
           <div className="navbar-item">
             <Link to="section-one" smooth duration={500}>
-              Carousel
+              Nos réalisations
             </Link>
           </div>
           <div className="navbar-item">
             <Link to="section-four" smooth duration={500}>
-              Cards
+              Nos services
             </Link>
           </div>
           <div className="navbar-item">
             <Link to="section-five" smooth duration={500}>
-              FAQs
+              Nos partenaires
             </Link>
           </div>
 
