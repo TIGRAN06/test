@@ -62,7 +62,7 @@ function ContactIcon({
   return (
     <div className={cx(classes.wrapper, className)} {...others}>
       {variant === 'gradient' ? (
-        <ThemeIcon size={40} radius="md" className={classes.icon}>
+        <ThemeIcon size={30} radius="md" className={classes.icon}>
           <Icon size="1.5rem" />
         </ThemeIcon>
       ) : (
@@ -95,7 +95,7 @@ const MOCKDATA = [
 
 export function ContactIconsList({ data = MOCKDATA, variant }: ContactIconsListProps) {
   const items = data.map((item, index) => <ContactIcon key={index} variant={variant} {...item} />);
-  return <Stack align='left' mt={100}>{items}</Stack>;
+  return <Stack align-items='left' mt={100}>{items}</Stack>;
 }
 
 export function ContactIcons() {
