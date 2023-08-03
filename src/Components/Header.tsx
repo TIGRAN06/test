@@ -1,4 +1,4 @@
-import { Button, Badge, Burger, Drawer, Code, Title, Anchor, Text, createStyles } from '@mantine/core';
+import { Button, Badge, Image, Drawer, Code, Title, Anchor, Text, createStyles } from '@mantine/core';
 import { UnstyledButton, Group, Avatar } from '@mantine/core';
 import React from 'react';
 import { Link } from 'react-scroll';
@@ -9,6 +9,7 @@ const useStyles = createStyles((theme) => ({
       overflow: 'hidden',
       width: '100%',
       borderRadius: '20px',
+      padding:20,
       paddingTop: `calc(${theme.spacing.xl} * 3)`,
       paddingBottom: `calc(${theme.spacing.xl} * 3)`,
     }}));  
@@ -27,51 +28,33 @@ const Header = () => {
       <div className="content-desktop">
         
         <div>
-          <Badge size="lg" radius={10} mr={10} color=" blue">
-            Robert et fils
-          </Badge>
+          
         </div>
         <div className="navbar">
           <div className="navbar-item">
             <Link to="section-one" smooth duration={500}>
-              Nos réalisations
+            <Text color="white">Accueil</Text>
             </Link>
           </div>
           <div className="navbar-item">
-            <Link to="section-four" smooth duration={500}>
-              Nos services
+            <Link  to="section-four" smooth duration={500}>
+            <Badge
+            size="lg"
+            color="blue"
+            radius={10}>Nos réalisations</Badge>
+            
             </Link>
           </div>
           <div className="navbar-item">
             <Link to="section-five" smooth duration={500}>
-              Nos partenaires
+              <Text color="white">FAQs</Text>
             </Link>
           </div>
 
           <Button color=" blue" onClick={() => redirectToLink('https://mantine.dev/')}>
             Contactez nous!
           </Button>
-          <Code
-            color=" blue"
-            className="contact-code"
-          >
-            Contacts
-            <Anchor href="https://github.com">
-              <UnstyledButton>
-                <Group>
-                  <Avatar size={40} color="blue">
-                    logo
-                  </Avatar>
-                  <div>
-                    <Text>Robert et fils</Text>
-                    <Text size="xs" color="dimmed">
-                    contacts@robertetfils.fr
-                    </Text>
-                  </div>
-                </Group>
-              </UnstyledButton>
-            </Anchor>
-          </Code>
+        
         </div>
       </div>
     );
@@ -89,7 +72,6 @@ const Header = () => {
             size="lg"
             color="blue"
             radius={10}
-            ml={10}
           >
             Menu
           </Badge>
@@ -104,7 +86,7 @@ const Header = () => {
           position="right"
           closeButtonLabel="Close drawer"
           title="Menu"
-          padding="xl"
+          padding={40}
           opened={opened}
           onClose={() => setOpened(false)}
         >

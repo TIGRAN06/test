@@ -1,10 +1,11 @@
-import { Text, Container, Button } from '@mantine/core';
+import { Text, Container, Button ,Image} from '@mantine/core';
 import { Link } from 'react-scroll';
 
 import { createStyles, Title } from '@mantine/core';
 
 const useStyles = createStyles((theme) => ({
   root: {
+    padding: 20,
     overflow: 'hidden',
     backgroundColor: '#11284b',
     backgroundSize: '100% 100%',
@@ -21,7 +22,6 @@ const useStyles = createStyles((theme) => ({
     display: 'flex',
     justifyContent: 'space-between',
     textAlign: 'center', 
-    marginBottom:40,
 
     [theme.fn.smallerThan('md')]: {
       flexDirection: 'column',
@@ -40,7 +40,6 @@ const useStyles = createStyles((theme) => ({
     marginRight: `calc(${theme.spacing.xl} * 3)`,
 
     [theme.fn.smallerThan('md')]: {
-      paddingRight: 0,
     },
   },
 
@@ -49,8 +48,10 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontWeight: 900,
     lineHeight: 1.05,
-    fontSize: '48px',
 
+
+    fontSize: '48px',
+    paddingTop: 20,
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
       fontSize: '34px',
@@ -61,9 +62,8 @@ const useStyles = createStyles((theme) => ({
   description: {
     color: theme.white,
     opacity: 0.75,
-
     [theme.fn.smallerThan('md')]: {
-      maxWidth: '100%',
+
     },
   },
 
@@ -71,7 +71,7 @@ const useStyles = createStyles((theme) => ({
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
     fontSize: '22px',
     borderRadius: '20px',
-
+    padding: 20,
     [theme.fn.smallerThan('md')]: {
       fontFamily: `Greycliff CF, ${theme.fontFamily}`,
       fontSize: '22px',
@@ -83,10 +83,13 @@ export function HeroImageRight() {
   const { classes } = useStyles();
   return (
     <div className={classes.root}>
-      <Container mt={40} size="lg">
+      
+      <Image width='32%' height='32%' src={require('../Images/logo.png')} />
+      <Container >
         <div className={classes.inner}>
           <div className={classes.content}>
-            <Title align="center" className={classes.title}>
+            <Title align="left" className={classes.title}>
+
               {' '}
               <Text
                 component="span"
@@ -96,10 +99,10 @@ export function HeroImageRight() {
               >
                 Robert et Fils
               </Text>{' '}
-              rénovation
+              rénovation 
             </Title>
 
-            <Text align="center" px={40} className={classes.description} mt={30}>
+            <Text align="left" className={classes.description} mt={30}>
               Forte de ses 30 années d'expérience, notre entreprise de rénovation et construction est un acteur de
               confiance sur le marché. Nous proposons une large gamme de services pour répondre aux besoins
               variés de nos clients. Notre équipe d'experts qualifiés excelle dans la rénovation complète
@@ -110,15 +113,17 @@ export function HeroImageRight() {
               Notre engagement envers l'excellence et notre passion pour l'innovation font de nous le choix idéal
               pour tous vos projets de construction et de rénovation.
             </Text>
-
             <Button
+              mt={30}
               variant="gradient"
               gradient={{ from: 'cyan', to: 'white' }}
               size="xl"
               className={classes.control}
-              mt={80}
             >
-              <Text color="black">Get started</Text>
+              <Text color="black">Get started
+              </Text>
+              
+
             </Button>
           </div>
         </div>
@@ -131,14 +136,6 @@ const About = () => {
   return (
     <section id="about">
       <HeroImageRight></HeroImageRight>
-
-      <Container fluid>
-        <div>
-          <div className="buttons">
-            <Link to="section-one" smooth duration={500}></Link>
-          </div>
-        </div>
-      </Container>
     </section>
   );
 };
