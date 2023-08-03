@@ -94,38 +94,33 @@ const Header = () => {
             <div className="menu-items">
               <div className="menu-item">
                 <Link to="section-one" smooth duration={500} onClick={() => setOpened(false)}>
-                  <Title order={2}>Nos réalisations</Title>
+                  <Title order={2}>Accueil</Title>
                 </Link>
               </div>
               <div className="menu-item">
                 <Link to="section-four" smooth duration={500} onClick={() => setOpened(false)}>
-                  <Title order={2}>Nos services</Title>
+                  <Title order={2}>Nos réalisations</Title>
                 </Link>
               </div>
               <div className="menu-item">
                 <Link to="section-five" smooth duration={500} onClick={() => setOpened(false)}>
-                  <Title order={2}>Nos partenaires</Title>
+                  <Title order={2}>FAQs</Title>
                 </Link>
               </div>
             </div>
 
             <div className="menu-items">
-              <Text>Contact</Text>
-
-              <Anchor href="mailto:example@mail.com">contacts@robertetfils.fr</Anchor>
             </div>
 
             <Code className="contact-code">
               <Anchor href="https://github.com">
                 <UnstyledButton>
                   <Group>
-                    <Avatar size={40} color="blue">
-                      logo
-                    </Avatar>
+                  <Image width='100%' height='100%' src={require('../Images/logo.png')} />
                     <div>
                       <Text>Robert et fils</Text>
                       <Text size="xs" color="dimmed">
-                        robertetfils@gmail.com
+                      <Anchor href="mailto:example@mail.com">contacts@robertetfils.fr</Anchor>
                       </Text>
                     </div>
                   </Group>
