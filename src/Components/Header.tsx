@@ -83,9 +83,6 @@ const Header = () => {
       <div className="content-mobile">
         <div className={classes.root}>
                 <div>
-          <Badge size="lg" radius={10} ml={10} color=" blue">
-            Robert et fils
-          </Badge>
           <Badge
             onClick={() => setOpened((o) => !o)}
             title={title}
