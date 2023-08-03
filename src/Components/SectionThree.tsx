@@ -1,5 +1,5 @@
 import { Carousel } from '@mantine/carousel';
-import { Grid, Text, Container, Title, Image, Button } from '@mantine/core';
+import { Grid, Text, Container, Title, Image } from '@mantine/core';
 
 const SectionThree = () => {
     //const theme = useMantineTheme();

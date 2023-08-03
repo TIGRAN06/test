@@ -1,7 +1,5 @@
 import { Carousel } from '@mantine/carousel';
 import { Title, Text, Container, Grid, Image, Button } from '@mantine/core';
-import ReactPlayer from 'react-player';
-
 const SectionTwo = () => {
     //const theme = useMantineTheme();
     const carouselContent = {
@@ -61,7 +59,7 @@ const SectionTwo = () => {
             height='100%'
             autoPlay muted loop playsInline
           >
-          <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
+          <source src='https://v3.cdnpk.net/videvo_files/video/premium/partners0001/large_watermarked/BB_b2928690-ed6a-44db-a809-232cd6bea417_FPpreview.mp4'></source></video>
         </div>
       </div></div>
                         
@@ -79,7 +77,7 @@ const SectionTwo = () => {
             height='100%'
             autoPlay muted loop playsInline
           >
-          <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
+          <source src='https://v3.cdnpk.net/videvo_files/video/premium/partners0001/large_watermarked/BB_b2928690-ed6a-44db-a809-232cd6bea417_FPpreview.mp4'></source></video>
         </div>
       </div></div>
                     </Carousel.Slide>
@@ -96,7 +94,7 @@ const SectionTwo = () => {
             height='100%'
             autoPlay muted loop playsInline
           >
-          <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
+          <source src='https://v3.cdnpk.net/videvo_files/video/premium/partners0001/large_watermarked/BB_b2928690-ed6a-44db-a809-232cd6bea417_FPpreview.mp4'></source></video>
         </div>
       </div> </div>
                     </Carousel.Slide>
@@ -113,7 +111,7 @@ const SectionTwo = () => {
             height='100%'
             autoPlay muted loop playsInline
           >
-          <source src='http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4'></source></video>
+          <source src='https://v3.cdnpk.net/videvo_files/video/premium/partners0001/large_watermarked/BB_b2928690-ed6a-44db-a809-232cd6bea417_FPpreview.mp4'></source></video>
         </div>
       </div> </div>
                     </Carousel.Slide>

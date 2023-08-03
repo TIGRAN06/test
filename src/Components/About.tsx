@@ -1,43 +1,160 @@
-import { Text, Container, Anchor, MediaQuery, Button } from '@mantine/core';
-import { MdOutlineArrowDownward } from "react-icons/md";
+import { Text, Container, Button } from '@mantine/core';
 import { Link } from 'react-scroll';
+
+import { createStyles, Title } from '@mantine/core';
+
+const useStyles = createStyles((theme) => ({
+  root: {
+    border: '20px',
+    overflow: 'hidden',
+    backgroundColor: '#11284b',
+    backgroundSize: 'cover',
+    width: '100%',
+    height: '90%',
+    borderRadius:'20px',
+    backgroundPosition: 'center',
+    backgroundImage:
+      'linear-gradient(250deg, rgba(130, 201, 30, 0) 0%, #062343 70%), url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80)',
+    paddingTop: `calc(${theme.spacing.xl} * 3)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 3)`,
+  },
+
+  inner: {
+    radius:'md',
+    display: 'flex',
+    justifyContent: 'space-between',
+
+    [theme.fn.smallerThan('md')]: {
+      flexDirection: 'column',
+    },
+  },
+
+  image: {
+    radius:'md',
+    [theme.fn.smallerThan('md')]: {
+      display: 'none',
+    },
+  },
+
+  content: {
+    radius:'md',
+    paddingTop: `calc(${theme.spacing.xl} * 2)`,
+    paddingBottom: `calc(${theme.spacing.xl} * 2)`,
+    marginRight: `calc(${theme.spacing.xl} * 3)`,
+
+    [theme.fn.smallerThan('md')]: {
+      paddingRight: 25,
+    },
+  },
+
+  title: {
+    radius:'md',
+    color: theme.white,
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 900,
+    lineHeight: 1.05,
+    paddingLeft:15,
+    fontSize: '48',
+
+    [theme.fn.smallerThan('md')]: {
+      maxWidth: '100%',
+      fontSize: '34',
+      lineHeight: 1.15,
+    },
+  },
+
+  description: {
+    radius:'md',
+    color: theme.white,
+    opacity: 0.75,
+    paddingLeft:15,
+    [theme.fn.smallerThan('md')]: {
+      maxWidth: '100%',
+    },
+  },
+
+  control: {
+    radius:'md',
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontSize: '22',
+    borderRadius:20,
+
+    [theme.fn.smallerThan('md')]: {
+      width: '75%',
+      paddingLeft:50,
+      borderRadius:20,
+      fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+      fontSize: '22',
+    },
+  },
+}));
+
+export function HeroImageRight() {
+  const { classes } = useStyles();
+  return (
+    <div className={classes.root}>
+      <Container mt={40} size="lg">
+        <div className={classes.inner}>
+          <div className={classes.content}>
+            <Title align="center" className={classes.title}>
+            {' '}
+              <Text
+                component="span"
+                inherit
+
+                variant="gradient"
+                gradient={{ from: 'White', to: 'cyan' }}
+              >
+                Robert et Fils 
+              </Text>{' '}
+              rénovation
+            </Title>
+
+            <Text align="center" className={classes.description} mt={30}>
+            Forte de ses 30 années d&#39;expérience, notre entreprise de rénovation et construction est un acteur de
+confiance sur le marché. Nous proposons une large gamme de services pour répondre aux besoins
+variés de nos clients. Notre équipe d&#39;experts qualifiés excelle dans la rénovation complète
+d’appartements, maisons individuelles et bâtiments sur la Côte d’Azur et Monaco. Nous offrons
+également des services de construction clé en main, depuis la conception jusqu&#39;à la réalisation,
+garantissant un processus fluide et efficace. En outre, nous nous engageons à fournir des solutions
+durables et respectueuses de l&#39;environnement, en utilisant des matériaux de qualité supérieure.
+Notre engagement envers l&#39;excellence et notre passion pour l&#39;innovation font de nous le choix idéal
+pour tous vos projets de construction et de rénovation.</Text>
+
+            <Button
+              variant="gradient"
+              gradient={{ from: 'cyan', to: 'white' }}
+              size="xl"
+              className={classes.control}
+              mt={80}
+              ml={50}
+            >
+              <Text color="black">Get started</Text>
+            </Button>
+          </div>
+        </div>
+      </Container>
+    </div>
+  );
+}
 
 const About = () => {
     //const theme = useMantineTheme();
 
     return (
         <section id="about">
+          
+                        <HeroImageRight></HeroImageRight>
+                        
             <Container fluid>
 
-                <div className="about-content">
+                <div >
 
-                    <div style={{ marginBottom: 25 }}>
-                        <Text transform="uppercase" weight={500} color="blue">
-                            Une entreprise familial de père en fils
-                        </Text>
-                    </div>
-
-                    <div>
-                        <Text>
-                            <MediaQuery query="(max-width: 768px)" styles={{ fontSize: '2.8rem !important' }}>
-                                <h1 className="title">Notre expertise selon vos goûts</h1>
-                            </MediaQuery>
-                        </Text>
-                    </div>
-
-                    <div style={{ marginBottom: 25 }}>
-                        <Text size="xl" color="black">
-                            
-"Robert et fils" est une entreprise expérimentée dans la construction et renovation de maison, appartement et villa à Nice et dans ses alentours (Monaco, Cagnes-sur-Mer, Villeneuve-Loubet, Antibes, Vence…). Nos artisans sont également qualifiés pour tous travaux de rénovation intérieure alors n’hésitez pas à nous demander un devis gratuit ! <Anchor href="https://mantine.dev/" color="blue" >Contactez nous 😊</Anchor>.
-                        </Text>
-                    </div>
 
                     <div className="buttons">
                         <Link to="section-one" smooth duration={500}>
-                            <Button color=" blue" rightIcon={<MdOutlineArrowDownward size={16} />} radius="lg" size="md">Tell me more</Button>
-                        </Link>
+ </Link>
 
-                        <Button variant="default" radius="lg" size="md">Other stuff</Button>
                     </div>
 
                 </div>

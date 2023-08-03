@@ -12,7 +12,7 @@ const Header = () => {
         <header>
             <div className="content-desktop">
                 <div>
-                    <Badge size="lg" radius={10} color=" blue">Robert et fils</Badge>
+                    <Badge size="lg" radius={10} mr={10} color=" blue">Robert et fils</Badge>
                 </div>
                 <div className="navbar">
                     <div className="navbar-item"><Link to="section-one" smooth duration={500}>Carousel</Link></div>
@@ -39,12 +39,15 @@ const Header = () => {
 
             <div className="content-mobile">
                 <div className="burger-button">
-                    <Burger
-                        opened={opened}
+                    <Badge
                         onClick={() => setOpened((o) => !o)}
                         title={title}
-                        size="sm"
-                    />
+                        size="lg"
+                        color="cyan"
+                        radius="lg"
+                        
+                
+                    > Menu</Badge>
                 </div>
 
                 <Drawer

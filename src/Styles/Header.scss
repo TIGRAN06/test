@@ -27,6 +27,8 @@ header {
     .content-mobile {
         .burger-button {
             float: right;
+            border-radius: 100px;
+            background-color: black;
         }
     }
     /* Responsive header */
@@ -59,6 +61,7 @@ header {
     flex-direction: column;
     justify-content: space-between !important;
     gap: 30px;
+    border-radius: 100px;
     .menu-items {
         display: flex;
         flex-direction: column;

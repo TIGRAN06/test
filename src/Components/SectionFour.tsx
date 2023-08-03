@@ -1,9 +1,8 @@
 import { useMantineTheme, Container, Text, Title, Grid, Card, Image, Badge, Button, Group, SimpleGrid, Stack } from '@mantine/core';
 
 
-import { Accordion,Textarea, TextInput, ActionIcon, createStyles } from '@mantine/core';
+import {Textarea, TextInput, ActionIcon, createStyles } from '@mantine/core';
 import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
-import { FiCoffee, FiCloudSnow, FiAnchor } from "react-icons/fi";
 
   
 const useStyles = createStyles((theme) => ({
@@ -86,7 +85,7 @@ const useStyles = createStyles((theme) => ({
             <Title align="center"className={classes.title}>Contact us</Title>
             <Text  align="center" className={classes.description} mt="sm" mb={20}>
               Leave your email and we will get back to you within 24 hours
-              <Group align="center"     >{icons}</Group>
+              <Group align="center" >{icons}</Group>
             </Text>
   
            
