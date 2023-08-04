@@ -196,7 +196,7 @@ const useStyles = createStyles((theme) => ({
     },
   
     control: {
-      backgroundColor: theme.colors[theme.primaryColor][6],
+      backgroundColor: theme.colors.red[6],
     },
   }));
   
