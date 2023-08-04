@@ -314,9 +314,6 @@ const SectionFour = () => {
                                 Discover the career of Dennis Farina and his roles in movies!
                             </Text>
 
-                            <Button variant="light" color= "blue" fullWidth mt="14px">
-                                Find out
-                            </Button>
                         </Card>
                     </Grid.Col>
 
@@ -336,10 +333,6 @@ const SectionFour = () => {
                             <Text size="sm">
                                 Dennis Farina had a really great career with many opportunities!
                             </Text>
-
-                            <Button variant="light" color= "blue" fullWidth mt="14px">
-                                Find out
-                            </Button>
                         </Card>
                     </Grid.Col>
 
@@ -350,7 +343,7 @@ const SectionFour = () => {
                             </Card.Section>
 
                             <Group position="apart" style={{ marginBottom: 5, marginTop: theme.spacing.sm }}>
-                                <Text weight={500}>Design 3D</Text>
+                                <Text weight={500}>Architecture d’intérieure</Text>
                                 <Badge color= "blue" variant="light">
                                     Cool badge 3
                                 </Badge>
@@ -360,9 +353,6 @@ const SectionFour = () => {
                                 Discover the major roles of Dennis Farina and something else!
                             </Text>
 
-                            <Button variant="light" color= "blue" fullWidth mt="14px">
-                                Find out
-                            </Button>
                         </Card>
                     </Grid.Col>
                 </Grid>
