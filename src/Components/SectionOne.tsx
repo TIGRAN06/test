@@ -12,12 +12,14 @@ const useStyles = createStyles((theme) => ({
   },
 
   overlay: {
+    boxShadow: theme.shadows.sm,
     position: 'absolute',
     height: '8rem',
     width: '12rem',
     top: 0,
     left: 0,
-    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background,
+    backgroundColor: theme.fn.variant({ variant: 'light', color: theme.colors.red[6] }).background,
+    borderRadius:20,
     zIndex: 1,
   },
 
@@ -27,7 +29,7 @@ const useStyles = createStyles((theme) => ({
   },
 
   icon: {
-    color: theme.fn.variant({ variant: 'light', color: theme.primaryColor }).color,
+    color: "#21327A"
   },
 
   title: {

@@ -2,10 +2,34 @@ import { Text, Container, Button ,Image} from '@mantine/core';
 import { Link } from 'react-scroll';
 
 import { createStyles, Title } from '@mantine/core';
+import { useEffect, useState } from 'react';
+
+export function HeroImageRight() {
+
+  const [screenSize, setScreenSize] = useState(getCurrentDimension());
+
+  function getCurrentDimension(){
+    return {
+        width: window.innerWidth,
+        height: window.innerHeight
+    }
+  }
+
+  useEffect(() => {
+      const updateDimension = () => {
+          setScreenSize(getCurrentDimension())
+      }
+      window.addEventListener('resize', updateDimension);
+  
+  
+      return(() => {
+          window.removeEventListener('resize', updateDimension);
+      })
+  }, [screenSize])
 
 let paddingVar = 20;
 
-const width = window.innerWidth;
+const width = screenSize.width;
 if (width <= 576) {
   paddingVar = 0;
 } else if (width <= 768) {
@@ -15,6 +39,7 @@ if (width <= 576) {
 const useStyles = createStyles((theme) => ({
   root: {
     padding: 20,
+
     overflow: 'hidden',
     backgroundColor: '#11284b',
     backgroundSize: '100% 100%',
@@ -88,16 +113,15 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-export function HeroImageRight() {
   const { classes } = useStyles();
   let strSize = '35%';
-
-  const width = window.innerWidth;
   if (width <= 576) {
     strSize = '50%';
   } else if (width <= 768) {
     strSize = '30%';
   }
+
+  
   return (
     <div className={classes.root}>
       

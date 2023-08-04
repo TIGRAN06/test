@@ -99,7 +99,7 @@ const MOCKDATA = [
 ];
 
 export function ContactIconsList({ data = MOCKDATA, variant }: ContactIconsListProps) {
-  const items = data.map((item, index) => <ContactIcon align-items="center" margin-bottom={20} key={index} variant={variant} {...item} />);
+  const items = data.map((item, index) => <ContactIcon align-items="center" justify-content="center" margin-bottom={20} key={index} variant={variant} {...item} />);
   return <Text align-items='center' mt={100}>{items}</Text>;
 }
 
@@ -116,7 +116,7 @@ export function ContactIcons() {
         <ContactIconsList />
       </Box>
 
-      <Box
+      <Box justify-content='center' 
         sx={(theme) => ({
           padding: theme.spacing.xl,
           borderRadius: theme.radius.md,
@@ -137,7 +137,7 @@ const useStyles = createStyles((theme) => ({
     minHeight: 200,
     boxSizing: 'border-box',
     backgroundImage: `linear-gradient(-60deg, #21327A 0%, #21327A 80%)`,
-    borderRadius: theme.radius.md,
+    borderRadius: 20,
   
     [theme.fn.smallerThan('sm')]: {
     },
@@ -158,17 +158,19 @@ const useStyles = createStyles((theme) => ({
     form: {
       backgroundColor: theme.white,
       padding: theme.spacing.xl,
-      borderRadius: theme.radius.md,
+      borderRadius: 20,
       boxShadow: theme.shadows.lg,
+      justifyContent: 'center',
+      justify: 'center',
     },
     test: {
-      borderRadius: theme.radius.md,
+      borderRadius: 20,
       boxShadow: theme.shadows.lg,
       width:'100%',
       justify: 'center',
     },
     descr: {
-      borderRadius: theme.radius.md,
+      borderRadius: 20,
       boxShadow: theme.shadows.lg,
       alignItems: 'center',
       justifyContent: 'center',
@@ -292,13 +294,13 @@ const SectionFour = () => {
     return (
         <section id="section-four">
             <Container>
-                <Text style={{ marginBottom: 20 }}color="black" align="center">
-                    <Title order={1} mb="30px">These cards are really nice</Title>
+                <Text color="black" align="center">
+                    <Title order={1} >These cards are really nice</Title>
                 </Text>
 
                 <Grid style={{borderRadius:100, marginBottom: 20 }}>
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>
-                        <Card  radius="md" shadow="sm" p="lg" style={{ height: '100%'}}>
+                        <Card  radius={20} shadow="sm" p="lg" style={{ height: '100%'}}>
                             <Card.Section>
                                 <Image src={require('../Images/lime-welcome.png')} alt={'sample1'} />
                             </Card.Section>
@@ -318,7 +320,7 @@ const SectionFour = () => {
                     </Grid.Col>
 
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>
-                        <Card  radius="md" shadow="sm" p="lg" style={{ height: '100%' }}>
+                        <Card  radius={20}  shadow="sm" p="lg" style={{ height: '100%' }}>
                             <Card.Section>
                                 <Image src={require('../Images/lime-canoeing.png')} alt={'sample1'} />
                             </Card.Section>
@@ -337,7 +339,7 @@ const SectionFour = () => {
                     </Grid.Col>
 
                     <Grid.Col  xs={12} sm={4} md={4} lg={4}>
-                        <Card  radius="md" shadow="sm" p="lg" style={{ height: '100%' }}>
+                        <Card  radius={20}  shadow="sm" p="lg" style={{ height: '100%' }}>
                             <Card.Section>
                                 <Image src={require('../Images/lime-message-sent.png')} alt={'sample1'} />
                             </Card.Section>
