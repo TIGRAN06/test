@@ -15,16 +15,24 @@ type ContactIconVariant = 'white' | 'gradient';
 interface ContactIconStyles {
   variant: ContactIconVariant;
 }
+let paddingVar = 2;
+
+const width = window.innerWidth;
+if (width <= 576) {
+  paddingVar = 1;
+} else if (width <= 768) {
+  paddingVar = 1;
+}
+
 
 const useStyles2 = createStyles((theme, { variant }: ContactIconStyles) => ({
   wrapper: {
-    display: 'flex',
     alignItems: 'center',
     color: theme.white,
   },
 
   icon: {
-    marginRight: theme.spacing.md,
+    alignItems: 'center',
     backgroundImage:
       variant === 'gradient'
         ? `linear-gradient(135deg, "blue" 0%, ${
@@ -61,21 +69,18 @@ function ContactIcon({
   const { classes, cx } = useStyles2({ variant });
   return (
     <div className={cx(classes.wrapper, className)} {...others}>
-      {variant === 'gradient' ? (
-        <ThemeIcon size={30} radius="md" className={classes.icon}>
-          <Icon size="1.5rem" />
-        </ThemeIcon>
-      ) : (
-        <Box mr="md">
-          <Icon size="1.5rem" />
-        </Box>
-      )}
 
       <div>
-        <Text size="xs" className={classes.title}>
+
+        <Text align="center" size="xs" className={classes.title}>
+        <ThemeIcon align-items="center"size={40} radius="md" className={classes.icon}>
+          <Icon size="1.5rem" />
+        </ThemeIcon>
+        </Text>
+        <Text align="center" size="xs" className={classes.title}>
           {title}
         </Text>
-        <Text className={classes.description}>{description}</Text>
+        <Text align="center" className={classes.description}>{description}</Text>
       </div>
     </div>
   );
@@ -94,14 +99,14 @@ const MOCKDATA = [
 ];
 
 export function ContactIconsList({ data = MOCKDATA, variant }: ContactIconsListProps) {
-  const items = data.map((item, index) => <ContactIcon key={index} variant={variant} {...item} />);
-  return <Stack align-items='left' mt={100}>{items}</Stack>;
+  const items = data.map((item, index) => <ContactIcon align-items="center" key={index} variant={variant} {...item} />);
+  return <Text align-items='center' mt={100}>{items}</Text>;
 }
 
 export function ContactIcons() {
   return (
     <SimpleGrid cols={2} breakpoints={[{ maxWidth: 755, cols: 1 }]}>
-      <Box 
+      <Box align-items="center"
         sx={(theme) => ({
           padding: theme.spacing.xl,
           borderRadius: theme.radius.md,
@@ -131,9 +136,7 @@ const useStyles = createStyles((theme) => ({
   wrapper: {
     minHeight: 200,
     boxSizing: 'border-box',
-    backgroundImage: `linear-gradient(-60deg, ${theme.colors[theme.primaryColor][4]} 0%, ${
-      theme.colors[theme.primaryColor][7]
-    } 100%)`,
+    backgroundImage: `linear-gradient(-60deg, #21327A 0%, #21327A 80%)`,
     borderRadius: theme.radius.md,
   
     [theme.fn.smallerThan('sm')]: {
@@ -210,7 +213,7 @@ const useStyles = createStyles((theme) => ({
   
     return (
       <div className={classes.wrapper}>
-      <SimpleGrid cols={2} spacing={0} breakpoints={[{ cols: 2 }]}>
+      <SimpleGrid cols={paddingVar} spacing={0} breakpoints={[{ cols: paddingVar }]}>
         <div className={classes.test}>
           <Title align="center" mt={40} className={classes.title}>
             Contactez nous !
@@ -246,7 +249,7 @@ const useStyles = createStyles((theme) => ({
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <Group position="right" mt="md">
-              <Button className={classes.control}>Send message</Button>
+              <Button color="red" className={classes.control}>Send message</Button>
             </Group>
           </div>
         </SimpleGrid>

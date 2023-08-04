@@ -15,29 +15,17 @@ const useStyles = createStyles((theme, { checked }: { checked: boolean }) => ({
     justifyContent: 'center', // Added alignment for the whole button
     width: '100%',
     transition: 'background-color 150ms ease, border-color 150ms ease',
-    border: `${'1rem'} solid ${
-      checked
-        ? theme.fn.variant({ variant: 'outline', color: theme.primaryColor }).border
-        : theme.colorScheme === 'dark'
-        ? theme.colors.dark[8]
-        : theme.colors.gray[3]
-    }`,
+    border: `${'1rem'} solid ${checked ? '#21327A' : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]}`,
     borderRadius: theme.radius.sm,
     padding: theme.spacing.sm,
-    backgroundColor: checked
-      ? theme.fn.variant({ variant: 'light', color: theme.primaryColor }).background
-      : theme.colorScheme === 'dark'
-      ? theme.colors.dark[8]
-      : theme.white,
-  },
-
-  body: {
-    display: 'flex', // Added display flex
-    flexDirection: 'column', // Added column direction
-    alignItems: 'center', // Center alignment for text elements
-    justify: 'center', // Center alignment for text elements
-  },
-}));
+    backgroundColor: checked ? theme.colors.gray[3] : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white},
+    body: {
+      display: 'flex', // Added display flex
+      flexDirection: 'column', // Added column direction
+      alignItems: 'center', // Center alignment for text elements
+      justify: 'center', // Center alignment for text elements
+    },
+  }));
 
 
 interface ImageCheckboxProps {
@@ -81,12 +69,6 @@ export function ImageCheckbox({
         <Text weight={500} size="sm" sx={{ lineHeight: 1 }}>
           {title}
         </Text>
-      <Checkbox
-        checked={value}
-        onChange={() => {}}
-        tabIndex={-1}
-        styles={{ input: { cursor: 'pointer' } }}
-      />
             </div>
     </UnstyledButton>
   );

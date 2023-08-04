@@ -51,7 +51,7 @@ const Header = () => {
             </Link>
           </div>
 
-          <Button color=" blue" onClick={() => redirectToLink('https://mantine.dev/')}>
+          <Button color="red" onClick={() => redirectToLink('https://mantine.dev/')}>
             Contactez nous!
           </Button>
         
@@ -70,7 +70,7 @@ const Header = () => {
             onClick={() => setOpened((o) => !o)}
             title={title}
             size="lg"
-            color="blue"
+            color="red"
             radius={10}
           >
             Menu

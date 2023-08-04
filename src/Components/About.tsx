@@ -3,6 +3,15 @@ import { Link } from 'react-scroll';
 
 import { createStyles, Title } from '@mantine/core';
 
+let paddingVar = 20;
+
+const width = window.innerWidth;
+if (width <= 576) {
+  paddingVar = 0;
+} else if (width <= 768) {
+  paddingVar = 0;
+}
+
 const useStyles = createStyles((theme) => ({
   root: {
     padding: 20,
@@ -51,7 +60,7 @@ const useStyles = createStyles((theme) => ({
 
 
     fontSize: '48px',
-    paddingTop: 20,
+    paddingTop: paddingVar,
     [theme.fn.smallerThan('md')]: {
       maxWidth: '100%',
       fontSize: '34px',
@@ -81,10 +90,18 @@ const useStyles = createStyles((theme) => ({
 
 export function HeroImageRight() {
   const { classes } = useStyles();
+  let strSize = '35%';
+
+  const width = window.innerWidth;
+  if (width <= 576) {
+    strSize = '50%';
+  } else if (width <= 768) {
+    strSize = '30%';
+  }
   return (
     <div className={classes.root}>
       
-      <Image width='32%' height='32%' src={require('../Images/logo.png')} />
+      <Image width={strSize} height={strSize} src={require('../Images/logo.png')} />
       <Container >
         <div className={classes.inner}>
           <div className={classes.content}>
@@ -95,14 +112,14 @@ export function HeroImageRight() {
                 component="span"
                 inherit
                 variant="gradient"
-                gradient={{ from: 'White', to: 'cyan' }}
+                gradient={{ from: 'cyan', to: '#21327A' }}
               >
                 Robert et Fils
               </Text>{' '}
               rénovation 
             </Title>
 
-            <Text align="left" className={classes.description} mt={30}>
+            <Text align="left" className={classes.description} mt={paddingVar}>
               Forte de ses 30 années d'expérience, notre entreprise de rénovation et construction est un acteur de
               confiance sur le marché. Nous proposons une large gamme de services pour répondre aux besoins
               variés de nos clients. Notre équipe d'experts qualifiés excelle dans la rénovation complète
@@ -114,13 +131,14 @@ export function HeroImageRight() {
               pour tous vos projets de construction et de rénovation.
             </Text>
             <Button
-              mt={30}
+              mt={20}
               variant="gradient"
-              gradient={{ from: 'cyan', to: 'white' }}
+
+              gradient={{ from: '#21327A', to: 'cyan' }}
               size="xl"
               className={classes.control}
             >
-              <Text color="black">Get started
+              <Text color="white">Get started
               </Text>
               
 
