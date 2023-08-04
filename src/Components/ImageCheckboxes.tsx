@@ -15,7 +15,7 @@ const useStyles = createStyles((theme, { checked }: { checked: boolean }) => ({
     justifyContent: 'center', // Added alignment for the whole button
     width: '100%',
     transition: 'background-color 150ms ease, border-color 150ms ease',
-    border: `${'1rem'} solid ${checked ? '#21327A' : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]}`,
+    border: `${'1rem'} solid ${checked ? '#E91D29' : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]}`,
     borderRadius: theme.radius.sm,
     padding: theme.spacing.sm,
     backgroundColor: checked ? theme.colors.gray[3] : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white},

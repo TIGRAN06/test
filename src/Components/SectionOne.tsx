@@ -13,7 +13,7 @@ const useStyles = createStyles((theme) => ({
 
   overlay: {
     position: 'absolute',
-    height: '12rem',
+    height: '8rem',
     width: '12rem',
     top: 0,
     left: 0,
@@ -49,7 +49,7 @@ function Feature({ icon: Icon, title, description, className, ...others }: Featu
       <div className={classes.overlay} />
 
       <div className={classes.content}>
-        <Icon size='12rem' className={classes.icon} stroke={1.5} />
+        <Icon size='6rem' className={classes.icon} stroke={1.5} />
         <Text fw={700} fz="lg" mb="xs" mt={5} className={classes.title}>
           {title}
         </Text>

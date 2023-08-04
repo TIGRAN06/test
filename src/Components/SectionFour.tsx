@@ -249,7 +249,7 @@ const useStyles = createStyles((theme) => ({
               classNames={{ input: classes.input, label: classes.inputLabel }}
             />
             <Group position="right" mt="md">
-              <Button color="red" className={classes.control}>Send message</Button>
+              <Button color="red" align-items="center" className={classes.control}>Send message</Button>
             </Group>
           </div>
         </SimpleGrid>
