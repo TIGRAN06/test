@@ -15,7 +15,7 @@ const useStyles = createStyles((theme, { checked }: { checked: boolean }) => ({
     justifyContent: 'center', // Added alignment for the whole button
     width: '100%',
     transition: 'background-color 150ms ease, border-color 150ms ease',
-    border: `${'1rem'} solid ${checked ? '#E91D29' : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]}`,
+    border: `${'1rem'} solid ${checked ? theme.colors.red[6] : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]}`,
     borderRadius: theme.radius.sm,
     padding: theme.spacing.sm,
     backgroundColor: checked ? theme.colors.gray[3] : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white},
@@ -76,9 +76,10 @@ export function ImageCheckbox({
 
 const im= '"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"'
 const mockdata = [
-  { description: 'Sun and sea', title: 'Renovation', image: im},
-  { description: 'Sightseeing', title: 'Design', image: im },
-  { description: 'Mountains', title: 'Construction', image: im }
+  { description: 'Sun and sea', title: 'Plomberie', image: im},
+  { description: 'Sightseeing', title: 'Electricité', image: im },
+  { description: 'Mountains', title: 'Renovation', image: im },
+  { description: 'Mountains', title: 'Autres..', image: im }
 ];
 
 export function ImageCheckboxes() {
