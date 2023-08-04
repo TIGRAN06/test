@@ -99,7 +99,7 @@ const MOCKDATA = [
 ];
 
 export function ContactIconsList({ data = MOCKDATA, variant }: ContactIconsListProps) {
-  const items = data.map((item, index) => <ContactIcon align-items="center" key={index} variant={variant} {...item} />);
+  const items = data.map((item, index) => <ContactIcon align-items="center" margin-bottom={20} key={index} variant={variant} {...item} />);
   return <Text align-items='center' mt={100}>{items}</Text>;
 }
 

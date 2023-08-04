@@ -1,4 +1,4 @@
-import { useMantineTheme, Container, Grid, Avatar, UnstyledButton, Anchor, Code } from '@mantine/core';
+import { useMantineTheme, Container, Grid, Image, UnstyledButton, Anchor, Code } from '@mantine/core';
 import {
     Text,
     Button,
@@ -37,10 +37,10 @@ const Footer = () => {
                             <Anchor href="https://github.com">
                                 <UnstyledButton>
                                     <Group>
-                                        <Avatar size={40} color= "blue">GDC</Avatar>
+                                    <Image width='32%' height='32%' src={require('../Images/logo.png')} />
                                         <div>
                                             <Text>Robert et fils</Text>
-                                            <Text size="xs" color="dimmed">mail@outlook.com</Text>
+                                            <Text size="xs" color="dimmed">contacts@robertetfils.fr</Text>
                                         </div>
                                     </Group>
                                 </UnstyledButton>
