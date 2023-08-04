@@ -15,11 +15,12 @@ const useStyles = createStyles((theme, { checked }: { checked: boolean }) => ({
     justifyContent: 'center', // Added alignment for the whole button
     width: '100%',
     transition: 'background-color 150ms ease, border-color 150ms ease',
-    border: `${'0.8rem'} solid ${checked ? theme.colors.red[6] : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[3]}`,
+    border: `${'0.2rem'} solid ${checked ? theme.colors.blue[1]  : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.blue[1]}`,
     borderRadius: 20,
-    padding: theme.spacing.sm,
-    backgroundColor: checked ? theme.colors.gray[3] : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white},
+    padding: theme.spacing.xs,
+    backgroundColor: checked ? theme.colors.green[1] : theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white},
     body: {
+      borderRadius: 20,
       display: 'flex', // Added display flex
       flexDirection: 'column', // Added column direction
       alignItems: 'center', // Center alignment for text elements

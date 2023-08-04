@@ -1,4 +1,4 @@
-import { useMantineTheme, Container, Text, Title, Grid, Card, Image, Badge, Button, Group, SimpleGrid, Stack } from '@mantine/core';
+import { useMantineTheme, Container, Text, Title, Grid, Card, Image, Badge, Button, Group, SimpleGrid, Stack, Code, Anchor, UnstyledButton } from '@mantine/core';
 
 
 import {Textarea, TextInput, ActionIcon, createStyles } from '@mantine/core';
@@ -73,7 +73,7 @@ function ContactIcon({
       <div>
 
         <Text align="center" size="xs" className={classes.title}>
-        <ThemeIcon align-items="center"size={40} radius="md" className={classes.icon}>
+        <ThemeIcon align-items="center"size={40} radius={20} className={classes.icon}>
           <Icon size="1.5rem" />
         </ThemeIcon>
         </Text>
@@ -137,19 +137,21 @@ const useStyles = createStyles((theme) => ({
     minHeight: 200,
     boxSizing: 'border-box',
     backgroundImage: `linear-gradient(-60deg, #21327A 0%, #21327A 80%)`,
-    borderRadius: 20,
+    borderRadius: "20px",
   
     [theme.fn.smallerThan('sm')]: {
     },
   },
   
     title: {
+      borderRadius: "20px",
       fontFamily: `Greycliff CF, ${theme.fontFamily}`,
       color: theme.white,
       lineHeight: 1,
     },
   
     description: {
+      borderRadius: "20px",
       color: theme.colors[theme.primaryColor][0],
   
       [theme.fn.smallerThan('sm')]: {
@@ -158,19 +160,19 @@ const useStyles = createStyles((theme) => ({
     form: {
       backgroundColor: theme.white,
       padding: theme.spacing.xl,
-      borderRadius: 20,
+      borderRadius: "20px",
       boxShadow: theme.shadows.lg,
       justifyContent: 'center',
       justify: 'center',
     },
     test: {
-      borderRadius: 20,
+      borderRadius: "20px",
       boxShadow: theme.shadows.lg,
       width:'100%',
       justify: 'center',
     },
     descr: {
-      borderRadius: 20,
+      borderRadius: "20px",
       boxShadow: theme.shadows.lg,
       alignItems: 'center',
       justifyContent: 'center',
@@ -184,7 +186,9 @@ const useStyles = createStyles((theme) => ({
     },
   
     input: {
+      alignContent: "center",
       backgroundColor: theme.white,
+      borderRadius: "20px",
       borderColor: theme.colors.gray[4],
       color: theme.black,
   
@@ -194,10 +198,15 @@ const useStyles = createStyles((theme) => ({
     },
   
     inputLabel: {
+      borderRadius: "20px",
+
+      alignContent: "center",
       color: theme.black,
     },
   
     control: {
+      borderRadius: "20px",
+      alignContent: "center",
       backgroundColor: theme.colors.red[6],
     },
   }));
@@ -253,6 +262,9 @@ const useStyles = createStyles((theme) => ({
             <Group position="right" mt="md">
               <Button color="red" align-items="center" className={classes.control}>Send message</Button>
             </Group>
+
+            <Image width='100%' height='100%' src={require('../Images/logo2.PNG')} />
+
           </div>
         </SimpleGrid>
       </div>
@@ -270,7 +282,7 @@ export function Subgrid() {
   const theme = useMantineTheme();
   return (
     <Container my="md">
-      <SimpleGrid cols={4} breakpoints={[{ maxWidth: 'xs', cols: 1 }]}>
+      <SimpleGrid cols={4} breakpoints={[{ maxWidth: 'xs', cols: 2 }]}>
         {getChild(BASE_HEIGHT)}
         <Stack>
           {getChild(getSubHeight(2, theme.spacing.md))}

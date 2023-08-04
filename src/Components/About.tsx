@@ -125,7 +125,7 @@ const useStyles = createStyles((theme) => ({
   return (
     <div className={classes.root}>
       
-      <Image width={strSize} height={strSize} src={require('../Images/logo.png')} />
+      <Image width={strSize} height={strSize} src={require('../Images/logo2.PNG')} />
       <Container >
         <div className={classes.inner}>
           <div className={classes.content}>

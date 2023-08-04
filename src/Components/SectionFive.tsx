@@ -14,7 +14,7 @@ const SectionFive = () => {
                     </Text>
                 </div>
 
-                <Accordion  radius="md" variant="contained">
+                <Accordion  radius={20} variant="contained">
                     <Accordion.Item value="item1">
                         <Accordion.Control  style={{ textAlign: 'center' }} icon={<FiCoffee size={20} color={"#fab005"} />}>
                             Is Dennis Farina famous?

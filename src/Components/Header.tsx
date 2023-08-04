@@ -50,11 +50,9 @@ const Header = () => {
               <Text color="white">FAQs</Text>
             </Link>
           </div>
-
-          <Button color="red" onClick={() => redirectToLink('https://mantine.dev/')}>
+          <Button className="navbar-button"  color="red" onClick={() => redirectToLink('https://mantine.dev/')}>
             Contactez nous!
           </Button>
-        
         </div>
       </div>
     );
@@ -116,7 +114,7 @@ const Header = () => {
               <Anchor href="https://github.com">
                 <UnstyledButton>
                   <Group>
-                  <Image width='100%' height='100%' src={require('../Images/logo.png')} />
+                  <Image width='100%' height='100%' src={require('../Images/logo2.PNG')} />
                     <div>
                       <Text>Robert et fils</Text>
                       <Text size="xs" color="dimmed">

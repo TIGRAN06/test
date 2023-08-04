@@ -16,7 +16,7 @@ const SectionThree = () => {
             <Container>
                 <Grid justify="space-around">
                     <Grid.Col xs={6} sm={4} md={4} lg={4}>
-                        <Image radius="md" src={require('../Images/lime-bicycle-riding.png')} alt={'sample2'} style={{ width: '100%' }} />
+                        <Image radius={20} src={require('../Images/lime-bicycle-riding.png')} alt={'sample2'} style={{ width: '100%' }} />
                     </Grid.Col>
                     <Grid.Col xs={6} sm={8} md={8} lg={8}>
                         <div style={{ marginBottom: 20 }}>

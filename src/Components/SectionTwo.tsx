@@ -12,7 +12,7 @@ const SectionTwo = () => {
     };
     return (
         <section id="section-two">
-            <Container>
+            <Container box-sizing='border-box'>
                 <Grid justify="space-around">
                     <Grid.Col style={{ display: 'flex', justifyContent: 'flex-end' }} xs={6} sm={8} md={8} lg={8}>
                         <div >
@@ -22,12 +22,12 @@ const SectionTwo = () => {
                                 In 1998's "Saving Private Ryan," directed by Steven Spielberg, Farina played "Col. Anderson," a pivotal role in the film.
                                 `}
                             </Text>
-                            <div style={{  marginTop: 20, textAlign: 'center' }}><Button  color= "cyan">Voir plus</Button></div>
+                            <div style={{  marginTop: 20, textAlign: 'center' }}><Button  radius={20}color= "cyan">Voir plus</Button></div>
                         </div>
                         
                     </Grid.Col>
                     <Grid.Col xs={6} sm={4} md={4} lg={4}>
-                        <Image radius="md" src={require('../Images/lime-surfing.png')} alt={'sample1'} style={{ width: '100%' }} />
+                        <Image radius={20} src={require('../Images/lime-surfing.png')} alt={'sample1'} style={{ width: '100%' }} />
                     </Grid.Col>
                 </Grid>
 

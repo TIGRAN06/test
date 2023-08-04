@@ -14,7 +14,7 @@ const Footer = () => {
 
             <Container>
                 
-                <Grid justify="space-around">
+                <Grid border-radius={20} justify="space-around">
 
                     <Grid.Col xs={12} sm={8} md={8} lg={8}>
                         
@@ -28,11 +28,11 @@ const Footer = () => {
                             You can find the illustrations I used on <Anchor href="https://icons8.com/">www.icons8.com</Anchor>
                         </Text>
 
-                        <Button background-color= {theme.colors.red[6]}variant="white" color="black" onClick={() => redirectToLink('https://mantine.dev/')}>Check out Mantine</Button>
+                        <Button radius={20} background-color= {theme.colors.red[6]}variant="white" color="black" onClick={() => redirectToLink('https://mantine.dev/')}>Check out Mantine</Button>
                     </Grid.Col>
 
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>
-                        <Code color= "blue" style={{ display: 'flex', flexDirection: 'column', gap: 6, padding: 15 }}>
+                        <Code  color="blue" style={{ display: 'flex', flexDirection: 'column', borderRadius:20 , gap: 6, padding: 15 }}>
                             Une entreprise respectable depuis 1993
                             <Anchor href="https://github.com">
                                 <UnstyledButton>

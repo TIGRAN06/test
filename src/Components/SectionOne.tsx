@@ -10,6 +10,9 @@ const useStyles = createStyles((theme) => ({
     paddingTop: theme.spacing.xl,
     paddingLeft: theme.spacing.xl,
   },
+  reactPlayer:{
+    boxShadow: theme.shadows.sm
+  },
 
   overlay: {
     boxShadow: theme.shadows.sm,

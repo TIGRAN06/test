@@ -6,6 +6,9 @@ header {
         flex-direction: row;
         gap: 25px;
         align-items: center;
+        .navbar-button {
+            border-radius: 20px;
+        }
         .navbar-item {
             cursor: pointer;
             font-weight: 500;
