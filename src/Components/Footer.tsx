@@ -10,7 +10,7 @@ const Footer = () => {
     const theme = useMantineTheme();
     
     return (
-        <footer style={{ backgroundColor: theme.colors.cyan[5]}}>
+        <footer style={{ backgroundColor: '#21327A'}}>
 
             <Container>
                 
@@ -28,7 +28,7 @@ const Footer = () => {
                             You can find the illustrations I used on <Anchor href="https://icons8.com/">www.icons8.com</Anchor>
                         </Text>
 
-                        <Button variant="white" color="black" onClick={() => redirectToLink('https://mantine.dev/')}>Check out Mantine</Button>
+                        <Button background-color= {theme.colors.red[6]}variant="white" color="black" onClick={() => redirectToLink('https://mantine.dev/')}>Check out Mantine</Button>
                     </Grid.Col>
 
                     <Grid.Col xs={12} sm={4} md={4} lg={4}>

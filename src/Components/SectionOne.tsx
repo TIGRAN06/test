@@ -111,8 +111,8 @@ const SectionOne = () => {
         <div className='player-wrapper'>
         <video 
             className='react-player'
-            controls={true}
-            preload='auto'
+            controls={false}
+            autoPlay muted loop playsInline
             width='100%'
             height='100%'
           >

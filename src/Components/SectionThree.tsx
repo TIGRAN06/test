@@ -28,52 +28,6 @@ const SectionThree = () => {
                         </div>
                     </Grid.Col>
                 </Grid>
-                
-      <Carousel
-                    withIndicators
-                    height={"100%"}
-                    slideSize="33.333333%"
-                    slideGap="md"
-                    breakpoints={[
-                        { maxWidth: 'md', slideSize: '50%' },
-                        { maxWidth: 'sm', slideSize: '100%', slideGap: 15 },
-                    ]}
-                    loop
-                    align="start"
-                    pr="10px"
-                    pl="10px"
-                >
-
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title align="center" order={2}>Mont-Boron</Title>
-                            <Text align="center" >Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                        
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title align="center" order={2}>Mont-Boron</Title>
-                            <Text align="center" >Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title align="center" order={2}>Mont-Boron</Title>
-                            <Text align="center" >Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                    <Carousel.Slide>
-                        <div style={carouselContent}>
-                        <Title align="center" order={2}>Mont-Boron</Title>
-                            <Text align="center" >Something here too.</Text>
-                            <Image src={"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Doubs_Source_du_Lison_03.jpg/800px-Doubs_Source_du_Lison_03.jpg"} radius= "md" alt={'sample2'} />
-                        </div>
-                    </Carousel.Slide>
-                </Carousel>
             </Container>
         </section>
     );
