@@ -7,6 +7,7 @@ import { Link } from 'react-scroll';
 const useStyles = createStyles((theme) => ({
     root: {
       overflow: 'hidden',
+      position:'sticky',
       width: '100%',
       borderRadius: '20px',
       padding:20,
